@@ -52,3 +52,24 @@ This project includes essential YAML configuration files for setting up and mana
   - Used for configuring Helm-based deployments, such as Apache Airflow.
 
 
+## Getting Started
+
+### Prerequisites
+
+- A Kubernetes cluster.
+- `kubectl` installed and configured on your local machine.
+- Helm (optional, but recommended for managing Kubernetes applications like Apache Airflow).
+
+### Setup
+
+#### Deploy the Kubernetes Dashboard
+
+To set up the Kubernetes Dashboard, apply the YAML configuration files in your repository:
+
+```bash
+kubectl apply -f dashboard-adminuser.yaml
+kubectl apply -f dashboard-clusterrole.yaml
+kubectl apply -f dashboard-secret.yaml
+
+
+
