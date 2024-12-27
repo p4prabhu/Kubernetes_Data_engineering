@@ -72,5 +72,28 @@ kubectl apply -f dashboard-clusterrole.yaml
 kubectl apply -f dashboard-secret.yaml
 ```
 
+2. Accessing the Kubernetes Dashboard
+ To access the Dashboard, you may need to start a proxy server:
+```bash
+kubectl proxy
+```
+Then, access the Dashboard at: http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/.
+Use the token generated for the admin user to log in (see dashboard-secret.yaml)
+
+3. Deploy Apache Airflow:
+You can deploy Apache Airflow using Helm or by applying custom YAML files. For Helm:
+```bash
+helm repo add apache-airflow https://airflow.apache.org
+helm install airflow apache-airflow/airflow -f values.yaml
+```
+This will deploy Airflow with the settings defined in values.yaml.
+
+4. Adding DAGs to Airflow:
+   Copy your DAG files (e.g., fetch_and_preview.py, hello.py) into the DAGs folder of your Airflow deployment. The method of copying depends on your Airflow setup (e.g., using Persistent Volume, Git-sync).
+   After copying the DAG files, restart the Airflow scheduler and webserver if required to ensure the new DAGs are loaded.
+
+### Usage
+- Kubernetes Dashboard: Use the Kubernetes Dashboard to monitor and manage your Kubernetes cluster. You can view logs, check resource usage, and manage workloads through the Dashboard interface.
+- Apache Airflow: Access the Airflow web UI to schedule, manage, and monitor workflows. Ensure that your DAGs are visible in the UI and functioning as expected.
 
 
