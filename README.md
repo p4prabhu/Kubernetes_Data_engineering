@@ -19,3 +19,15 @@ Kubernetes_Data_Engineering_Project/
 ├── pyvenv.cfg                  # Python virtual environment configuration details
 ```
 
+## dags
+
+The `dags` directory contains Python scripts for Apache Airflow workflows (Directed Acyclic Graphs).
+
+- **fetch_and_preview.py**:
+  - A DAG designed to fetch data from a source and provide a preview of the dataset.
+  - Demonstrates data fetching and simple processing as part of an ETL workflow.
+
+- **hello.py**:
+  - A basic example DAG for Airflow.
+  - Useful for understanding Airflow’s structure and testing your setup.
+
