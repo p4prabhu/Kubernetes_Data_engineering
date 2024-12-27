@@ -30,4 +30,25 @@ The `dags` directory contains Python scripts for Apache Airflow workflows (Direc
 - **hello.py**:
   - A basic example DAG for Airflow.
   - Useful for understanding Airflow’s structure and testing your setup.
+ 
+## Kubernetes Configuration
+
+This project includes essential YAML configuration files for setting up and managing the Kubernetes Dashboard and related services:
+
+- **dashboard-adminuser.yaml**:
+  - YAML file for setting up an admin user for the Kubernetes Dashboard.
+  - Grants administrative access for easier cluster management.
+
+- **dashboard-clusterrole.yaml**:
+  - YAML file defining the cluster role required for the Kubernetes Dashboard.
+  - Ensures proper permissions for accessing cluster resources.
+
+- **dashboard-secret.yaml**:
+  - YAML file for managing secrets used by the Kubernetes Dashboard.
+  - Includes the admin user token needed for authentication.
+
+- **values.yaml**:
+  - YAML file containing customizable values for the Kubernetes setup.
+  - Used for configuring Helm-based deployments, such as Apache Airflow.
+
 
