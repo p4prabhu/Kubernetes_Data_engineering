@@ -70,6 +70,7 @@ To set up the Kubernetes Dashboard, apply the YAML configuration files in your r
 kubectl apply -f dashboard-adminuser.yaml
 kubectl apply -f dashboard-clusterrole.yaml
 kubectl apply -f dashboard-secret.yaml
+```
 
 
 
