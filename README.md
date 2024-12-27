@@ -62,7 +62,7 @@ This project includes essential YAML configuration files for setting up and mana
 
 ### Setup
 
-#### Deploy the Kubernetes Dashboard
+1. Deploy the Kubernetes Dashboard
 
 To set up the Kubernetes Dashboard, apply the YAML configuration files in your repository:
 
